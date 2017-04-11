@@ -183,13 +183,12 @@ typedef void (^UploadProgressBlock)(NSProgress *uploadProgress);
 /**
  *  上传文件的请求
  *
- *  @param URLString        网址
- *  @param parameters       请求参数（字典或者数组）
- *  @param requestBodyType  请求包体类型
- *  @param responseDataType 回复数据类型
- *  @param block            组合上传数据的block
- *  @param uploadProgress   上传进度
- *
+ *  @param urlString               网址
+ *  @param parameters              请求参数（字典或者数组）
+ *  @param requestBodyType         请求包体类型
+ *  @param responseDataType        回复数据类型
+ *  @param constructingBodyBlock   组合上传数据的block
+ *  @param uploadProgressBlock     上传进度
  *  @return Networking对象
  */
 + (id)uploadMethodNetworkingWithUrlString:(NSString *)urlString

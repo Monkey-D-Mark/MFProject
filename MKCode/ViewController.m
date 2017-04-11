@@ -10,6 +10,7 @@
 #import "MKCode.h"
 #import "HXSearchBar.h"
 #import "SignInViewController.h"
+#import "RealReachability.h"
 
 @interface ViewController ()
 
@@ -25,8 +26,81 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkChanged:)
+                                                 name:kRealReachabilityChangedNotification
+                                               object:nil];
+    
+    ReachabilityStatus status = [GLobalRealReachability currentReachabilityStatus];
+    NSLog(@"Initial reachability status:%@",@(status));
+    
+    if (status == RealStatusNotReachable)
+    {
+        NSLog(@"Network unreachable!");
+    }
+    
+    if (status == RealStatusViaWiFi)
+    {
+        NSLog(@"Network wifi! Free!");
+    }
+    
+    if (status == RealStatusViaWWAN)
+    {
+        NSLog( @"Network WWAN! In charge!");
+    }
 
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)networkChanged:(NSNotification *)notification
+{
+    RealReachability *reachability = (RealReachability *)notification.object;
+    ReachabilityStatus status = [reachability currentReachabilityStatus];
+    ReachabilityStatus previousStatus = [reachability previousReachabilityStatus];
+    NSLog(@"networkChanged, currentStatus:%@, previousStatus:%@", @(status), @(previousStatus));
+    
+    if (status == RealStatusNotReachable)
+    {
+        NSLog( @"Network unreachable!");
+    }
+    
+    if (status == RealStatusViaWiFi)
+    {
+        NSLog( @"Network wifi! Free!");
+    }
+    
+    if (status == RealStatusViaWWAN)
+    {
+        NSLog(@"Network WWAN! In charge!");
+    }
+    
+    WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
+    
+    if (status == RealStatusViaWWAN)
+    {
+        if (accessType == WWANType2G)
+        {
+            NSLog( @"RealReachabilityStatus2G");
+        }
+        else if (accessType == WWANType3G)
+        {
+            NSLog( @"RealReachabilityStatus3G");
+        }
+        else if (accessType == WWANType4G)
+        {
+            NSLog( @"RealReachabilityStatus4G");
+        }
+        else
+        {
+            NSLog( @"Unknown RealReachability WWAN Status, might be iOS6");
+        }
+    }
+}
+
 
 -(void)pushbutton{
     UIButton *signin = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 60, 30)];
