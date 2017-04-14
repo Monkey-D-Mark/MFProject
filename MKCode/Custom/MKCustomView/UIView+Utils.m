@@ -28,10 +28,12 @@
     _leftColor = leftColor;
     [self setNeedsDisplay];
 }
+
 - (void)setRightColor:(UIColor *)rightColor {
     _rightColor = rightColor;
     [self setNeedsDisplay];
 }
+
 - (void)setTopColor:(UIColor *)topColor {
     _topColor = topColor;
     [self setNeedsDisplay];
@@ -47,7 +49,7 @@
     [self setNeedsDisplay];
 }
 
--(void)setWidthUnitInPixel:(BOOL)widthUnitInPixel{
+-(void)setWidthUnitInPixel:(BOOL)widthUnitInPixel {
     _widthUnitInPixel = widthUnitInPixel;
     [self setNeedsDisplay];
 }
@@ -152,65 +154,65 @@
 @implementation UIView (Edge)
 
 #pragma -mark WIDTH
-- (CGFloat)edgeWidthLeft_lc{
+- (CGFloat)edgeWidthLeft{
     return [self.layer lc_findEdgeLayer].edges.left;
 }
 
--(void)setEdgeWidthLeft_lc:(CGFloat)edgeWidthLeft_lc{
+-(void)setEdgeWidthLeft:(CGFloat)edgeWidthLeft{
     LCEdgeLayer * layer = [self.layer lc_ensureEdgeLayer];
     UIEdgeInsets edges = layer.edges;
-    edges.left = edgeWidthLeft_lc;
+    edges.left = edgeWidthLeft;
     layer.edges = edges;
 }
 
-- (CGFloat)edgeWidthRight_lc{
+- (CGFloat)edgeWidthRight{
     return [self.layer lc_findEdgeLayer].edges.right;
 }
 
--(void)setEdgeWidthRight_lc:(CGFloat)edgeWidthRight_lc{
+-(void)setEdgeWidthRight:(CGFloat)edgeWidthRight{
     LCEdgeLayer * layer = [self.layer lc_ensureEdgeLayer];
     UIEdgeInsets edges = layer.edges;
-    edges.right = edgeWidthRight_lc;
+    edges.right = edgeWidthRight;
     layer.edges = edges;
 }
 
-- (CGFloat)edgeWidthTop_lc{
+- (CGFloat)edgeWidthTop{
     return [self.layer lc_findEdgeLayer].edges.top;
 }
 
--(void)setEdgeWidthTop_lc:(CGFloat)edgeWidthTop_lc{
+-(void)setEdgeWidthTop:(CGFloat)edgeWidthTop{
     LCEdgeLayer * layer = [self.layer lc_ensureEdgeLayer];
     UIEdgeInsets edges = layer.edges;
-    edges.top = edgeWidthTop_lc;
+    edges.top = edgeWidthTop;
     layer.edges = edges;
 }
 
-- (CGFloat)edgeWidthBottom_lc{
+- (CGFloat)edgeWidthBottom{
     return [self.layer lc_findEdgeLayer].edges.bottom;
 }
 
--(void)setEdgeWidthBottom_lc:(CGFloat)edgeWidthBottom_lc{
+-(void)setEdgeWidthBottom:(CGFloat)edgeWidthBottom_lc{
     LCEdgeLayer * layer = [self.layer lc_ensureEdgeLayer];
     UIEdgeInsets edges = layer.edges;
     edges.bottom = edgeWidthBottom_lc;
     layer.edges = edges;
 }
 
-- (BOOL)edgeWidthUnitInPixel_lc{
+- (BOOL)edgeWidthUnitInPixel{
     return [self.layer lc_findEdgeLayer].widthUnitInPixel;
 }
 
--(void)setEdgeWidthUnitInPixel_lc:(BOOL)edgeWidthUnitInPixel_lc{
-    [self.layer lc_ensureEdgeLayer].widthUnitInPixel = edgeWidthUnitInPixel_lc;
+-(void)setEdgeWidthUnitInPixel:(BOOL)edgeWidthUnitInPixel{
+    [self.layer lc_ensureEdgeLayer].widthUnitInPixel = edgeWidthUnitInPixel;
 }
 
-- (CGFloat)edgeZPosition_lc{
+- (CGFloat)edgeZPosition{
     return [self.layer lc_findEdgeLayer].zPosition;
 }
 
--(void)setEdgeZPosition_lc:(CGFloat)edgeZPosition_lc{
+-(void)setEdgeZPosition:(CGFloat)edgeZPosition{
     LCEdgeLayer * layer = [self.layer lc_ensureEdgeLayer];
-    layer.zPosition = edgeZPosition_lc;
+    layer.zPosition = edgeZPosition;
 #if TARGET_INTERFACE_BUILDER
     [layer removeFromSuperlayer];
     
@@ -229,135 +231,135 @@
 }
 
 #pragma -mark COLOR
--(UIColor *)edgeColorLeft_lc{
+-(UIColor *)edgeColorLeft{
     return [self.layer lc_findEdgeLayer].leftColor;
 }
 
--(void)setEdgeColorLeft_lc:(UIColor *)edgeColorLeft_lc{
-    [self.layer lc_ensureEdgeLayer].leftColor = edgeColorLeft_lc;
+-(void)setEdgeColorLeft:(UIColor *)edgeColorLeft{
+    [self.layer lc_ensureEdgeLayer].leftColor = edgeColorLeft;
 }
 
--(UIColor *)edgeColorRight_lc{
+-(UIColor *)edgeColorRight{
     return [self.layer lc_findEdgeLayer].rightColor;
 }
 
--(void)setEdgeColorRight_lc:(UIColor *)edgeColorRight_lc{
-    [self.layer lc_ensureEdgeLayer].rightColor = edgeColorRight_lc;
+-(void)setEdgeColorRight:(UIColor *)edgeColorRight{
+    [self.layer lc_ensureEdgeLayer].rightColor = edgeColorRight;
 }
 
--(UIColor *)edgeColorTop_lc{
+-(UIColor *)edgeColorTop{
     return [self.layer lc_findEdgeLayer].topColor;
 }
 
--(void)setEdgeColorTop_lc:(UIColor *)edgeColorTop_lc{
-    [self.layer lc_ensureEdgeLayer].topColor = edgeColorTop_lc;
+-(void)setEdgeColorTop:(UIColor *)edgeColorTop{
+    [self.layer lc_ensureEdgeLayer].topColor = edgeColorTop;
 }
 
--(UIColor *)edgeColorBottom_lc{
+-(UIColor *)edgeColorBottom{
     return [self.layer lc_findEdgeLayer].bottomColor;
 }
 
--(void)setEdgeColorBottom_lc:(UIColor *)edgeColorBottom_lc{
-    [self.layer lc_ensureEdgeLayer].bottomColor = edgeColorBottom_lc;
+-(void)setEdgeColorBottom:(UIColor *)edgeColorBottom{
+    [self.layer lc_ensureEdgeLayer].bottomColor = edgeColorBottom;
 }
 
 @end
 
 @implementation UIView(Border)
 
--(UIColor *)borderColor_lc{
+-(UIColor *)borderColor{
     return [UIColor colorWithCGColor:self.layer.borderColor];
 }
--(void)setBorderColor_lc:(UIColor *)borderColor_lc{
-    self.layer.borderColor = borderColor_lc.CGColor;
+-(void)setBorderColor:(UIColor *)borderColor{
+    self.layer.borderColor = borderColor.CGColor;
 }
 
--(CGFloat)borderWidth_lc{
+-(CGFloat)borderWidth{
     return [objc_getAssociatedObject(self, _cmd) floatValue];
 }
 
--(void)setBorderWidth_lc:(CGFloat)borderWidth_lc{
-    objc_setAssociatedObject(self, @selector(borderWidth_lc), @(borderWidth_lc), OBJC_ASSOCIATION_RETAIN);
+-(void)setBorderWidth:(CGFloat)borderWidth{
+    objc_setAssociatedObject(self, @selector(borderWidth), @(borderWidth), OBJC_ASSOCIATION_RETAIN);
     
-    if(self.borderWidthUnitInPixel_l)
-        self.layer.borderWidth = borderWidth_lc / [UIScreen mainScreen].scale;
+    if(self.borderWidthUnitInPixel)
+        self.layer.borderWidth = borderWidth / [UIScreen mainScreen].scale;
     else
-        self.layer.borderWidth = borderWidth_lc;
+        self.layer.borderWidth = borderWidth;
 }
 
--(BOOL)borderWidthUnitInPixel_l{
+-(BOOL)borderWidthUnitInPixel{
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
--(void)setBorderWidthUnitInPixel_l:(BOOL)borderWidthUnitInPixel_l{
-    objc_setAssociatedObject(self, @selector(borderWidthUnitInPixel_l), @(borderWidthUnitInPixel_l), OBJC_ASSOCIATION_RETAIN);
+-(void)setBorderWidthUnitInPixel:(BOOL)borderWidthUnitInPixel{
+    objc_setAssociatedObject(self, @selector(borderWidthUnitInPixel), @(borderWidthUnitInPixel), OBJC_ASSOCIATION_RETAIN);
     
-    if(borderWidthUnitInPixel_l)
-        self.layer.borderWidth = self.borderWidth_lc / [UIScreen mainScreen].scale;
+    if(borderWidthUnitInPixel)
+        self.layer.borderWidth = self.borderWidth / [UIScreen mainScreen].scale;
     else
-        self.layer.borderWidth = self.borderWidth_lc;
+        self.layer.borderWidth = self.borderWidth;
 }
 
--(CGFloat)borderCornerRadius_lc{
+-(CGFloat)borderCornerRadius{
     return self.layer.cornerRadius;
 }
 
--(void)setBorderCornerRadius_lc:(CGFloat)borderCornerRadius_lc{
-    self.layer.cornerRadius = borderCornerRadius_lc;
+-(void)setBorderCornerRadius:(CGFloat)borderCornerRadius{
+    self.layer.cornerRadius = borderCornerRadius;
 }
 
--(UIColor *)borderLayerColor_lc{
+-(UIColor *)borderLayerColor{
     return [UIColor colorWithCGColor: self.layer.backgroundColor];
 }
 
--(void)setBorderLayerColor_lc:(UIColor *)borderLayerColor_lc{
-    self.layer.backgroundColor = borderLayerColor_lc.CGColor;
+-(void)setBorderLayerColor:(UIColor *)borderLayerColor{
+    self.layer.backgroundColor = borderLayerColor.CGColor;
 }
 
--(BOOL)clipsToBounds_lc{
+-(BOOL)clipsToBounds{
     return self.clipsToBounds;
 }
 
--(void)setClipsToBounds_lc:(BOOL)clipToBounds_lc{
-    self.clipsToBounds = clipToBounds_lc;
+-(void)setClipsToBounds:(BOOL)clipToBounds{
+    self.clipsToBounds = clipToBounds;
 }
 
--(UIColor *)shadowColor_lc{
+-(UIColor *)shadowColor{
     return [UIColor colorWithCGColor:self.layer.shadowColor];
 }
 
--(void)setShadowColor_lc:(UIColor *)shadowColor_lc{
-    self.layer.shadowColor = shadowColor_lc.CGColor;
+-(void)setShadowColor:(UIColor *)shadowColor{
+    self.layer.shadowColor = shadowColor.CGColor;
 }
 
--(CGFloat)shadowOpacity_lc{
+-(CGFloat)shadowOpacity{
     return self.layer.shadowOpacity;
 }
 
--(void)setShadowOpacity_lc:(CGFloat)shadowOpacity_lc{
-    self.layer.shadowOpacity = shadowOpacity_lc;
+-(void)setShadowOpacity:(CGFloat)shadowOpacity{
+    self.layer.shadowOpacity = shadowOpacity;
 }
 
--(CGFloat)shadowRadius_lc{
+-(CGFloat)shadowRadius{
     return self.layer.shadowRadius;
 }
 
--(void)setShadowRadius_lc:(CGFloat)shadowRadius_lc{
-    self.layer.shadowRadius = shadowRadius_lc;
+-(void)setShadowRadius:(CGFloat)shadowRadius{
+    self.layer.shadowRadius = shadowRadius;
 }
 
--(CGPoint)shadowOffset_lc{
+-(CGPoint)shadowOffset{
     CGSize size = self.layer.shadowOffset;
     return CGPointMake(size.width, size.height);
 }
 
--(void)setShadowOffset_lc:(CGPoint)shadowOffset_lc{
+-(void)setShadowOffset:(CGPoint)shadowOffset{
     
     self.layer.shadowOffset =
 #if TARGET_INTERFACE_BUILDER
-    CGSizeMake(shadowOffset_lc.x, -shadowOffset_lc.y);
+    CGSizeMake(shadowOffset.x, -shadowOffset.y);
 #else
-    CGSizeMake(shadowOffset_lc.x, shadowOffset_lc.y);
+    CGSizeMake(shadowOffset.x, shadowOffset.y);
 #endif
     
 }
