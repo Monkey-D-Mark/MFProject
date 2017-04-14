@@ -34,68 +34,55 @@
     ReachabilityStatus status = [GLobalRealReachability currentReachabilityStatus];
     NSLog(@"Initial reachability status:%@",@(status));
     
-    if (status == RealStatusNotReachable)
-    {
+    if (status == RealStatusNotReachable){
         NSLog(@"Network unreachable!");
     }
     
-    if (status == RealStatusViaWiFi)
-    {
+    if (status == RealStatusViaWiFi){
         NSLog(@"Network wifi! Free!");
     }
     
-    if (status == RealStatusViaWWAN)
-    {
+    if (status == RealStatusViaWWAN){
         NSLog( @"Network WWAN! In charge!");
     }
 
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)networkChanged:(NSNotification *)notification
-{
+- (void)networkChanged:(NSNotification *)notification {
     RealReachability *reachability = (RealReachability *)notification.object;
     ReachabilityStatus status = [reachability currentReachabilityStatus];
     ReachabilityStatus previousStatus = [reachability previousReachabilityStatus];
     NSLog(@"networkChanged, currentStatus:%@, previousStatus:%@", @(status), @(previousStatus));
     
-    if (status == RealStatusNotReachable)
-    {
+    if (status == RealStatusNotReachable){
         NSLog( @"Network unreachable!");
     }
     
-    if (status == RealStatusViaWiFi)
-    {
+    if (status == RealStatusViaWiFi){
         NSLog( @"Network wifi! Free!");
     }
     
-    if (status == RealStatusViaWWAN)
-    {
+    if (status == RealStatusViaWWAN){
         NSLog(@"Network WWAN! In charge!");
     }
     
     WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
     
-    if (status == RealStatusViaWWAN)
-    {
-        if (accessType == WWANType2G)
-        {
+    if (status == RealStatusViaWWAN){
+        if (accessType == WWANType2G){
             NSLog( @"RealReachabilityStatus2G");
         }
-        else if (accessType == WWANType3G)
-        {
+        else if (accessType == WWANType3G){
             NSLog( @"RealReachabilityStatus3G");
         }
-        else if (accessType == WWANType4G)
-        {
+        else if (accessType == WWANType4G){
             NSLog( @"RealReachabilityStatus4G");
         }
-        else
-        {
+        else{
             NSLog( @"Unknown RealReachability WWAN Status, might be iOS6");
         }
     }

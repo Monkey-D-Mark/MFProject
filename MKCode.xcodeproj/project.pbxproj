@@ -86,6 +86,8 @@
 		1774471B1E9C96870079E5EE /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 177447041E9C96870079E5EE /* UIView+WebCache.m */; };
 		1774471C1E9C96870079E5EE /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 177447061E9C96870079E5EE /* UIView+WebCacheOperation.m */; };
 		17799ABD1E81117B001F8D77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17799ABC1E81117B001F8D77 /* SignInViewController.m */; };
+		177BD91A1E9F6943002F10F2 /* MKCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177BD9191E9F6943002F10F2 /* MKCustomView.m */; };
+		177BD91D1E9F6A03002F10F2 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 177BD91C1E9F6A03002F10F2 /* UIView+Utils.m */; };
 		178E926E1E7A737800B0B61D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E926D1E7A737800B0B61D /* main.m */; };
 		178E92711E7A737800B0B61D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E92701E7A737800B0B61D /* AppDelegate.m */; };
 		178E92741E7A737800B0B61D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E92731E7A737800B0B61D /* ViewController.m */; };
@@ -261,6 +263,10 @@
 		177447061E9C96870079E5EE /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		17799ABB1E81117B001F8D77 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		17799ABC1E81117B001F8D77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		177BD9181E9F6943002F10F2 /* MKCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCustomView.h; sourceTree = "<group>"; };
+		177BD9191E9F6943002F10F2 /* MKCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCustomView.m; sourceTree = "<group>"; };
+		177BD91B1E9F6A03002F10F2 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		177BD91C1E9F6A03002F10F2 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		178E92691E7A737800B0B61D /* MKCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178E926D1E7A737800B0B61D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		178E926F1E7A737800B0B61D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -442,6 +448,7 @@
 		171B612C1E978CFA00F7A6CE /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				177BD9171E9F6867002F10F2 /* MKCustomView */,
 				171B61561E97917600F7A6CE /* MKNetworking */,
 				171B61391E978D2300F7A6CE /* MKCode */,
 				171B612D1E978CFA00F7A6CE /* MKButton */,
@@ -611,6 +618,17 @@
 				177446DF1E9C96870079E5EE /* FLAnimatedImageView.m */,
 			);
 			path = FLAnimatedImage;
+			sourceTree = "<group>";
+		};
+		177BD9171E9F6867002F10F2 /* MKCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				177BD9181E9F6943002F10F2 /* MKCustomView.h */,
+				177BD9191E9F6943002F10F2 /* MKCustomView.m */,
+				177BD91B1E9F6A03002F10F2 /* UIView+Utils.h */,
+				177BD91C1E9F6A03002F10F2 /* UIView+Utils.m */,
+			);
+			path = MKCustomView;
 			sourceTree = "<group>";
 		};
 		178E92601E7A737800B0B61D = {
@@ -789,6 +807,7 @@
 				171B60F31E97866500F7A6CE /* AFURLSessionManager.m in Sources */,
 				171B61681E97917600F7A6CE /* AbsRequestParameterSerializer.m in Sources */,
 				1774470D1E9C96870079E5EE /* SDImageCache.m in Sources */,
+				177BD91A1E9F6943002F10F2 /* MKCustomView.m in Sources */,
 				1774470F1E9C96870079E5EE /* SDWebImageCompat.m in Sources */,
 				1774466A1E9C64960079E5EE /* XMLRootModel.m in Sources */,
 				1774471B1E9C96870079E5EE /* UIView+WebCache.m in Sources */,
@@ -810,6 +829,7 @@
 				171B61271E97867800F7A6CE /* MASViewConstraint.m in Sources */,
 				171B616B1E97917600F7A6CE /* RequestMethodType.m in Sources */,
 				171B60F21E97866500F7A6CE /* AFURLResponseSerialization.m in Sources */,
+				177BD91D1E9F6A03002F10F2 /* UIView+Utils.m in Sources */,
 				171B60FE1E97866500F7A6CE /* FSMEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
