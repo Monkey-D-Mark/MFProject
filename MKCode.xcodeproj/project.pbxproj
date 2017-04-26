@@ -59,6 +59,7 @@
 		171B61731E9791B000F7A6CE /* NetworkingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 171B61711E9791B000F7A6CE /* NetworkingIndicator.m */; };
 		17698F181E97270C002C273B /* favor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17698F171E97270C002C273B /* favor@3x.png */; };
 		177248C01E9B82650077B649 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 177248BF1E9B82650077B649 /* XMLDictionary.m */; };
+		177337391EB03FE6007F5D30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177337381EB03FE6007F5D30 /* QuartzCore.framework */; };
 		177446671E9C63D40079E5EE /* XMLSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 177446661E9C63D40079E5EE /* XMLSerializer.m */; };
 		1774466A1E9C64960079E5EE /* XMLRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 177446691E9C64960079E5EE /* XMLRootModel.m */; };
 		1774466D1E9C66D70079E5EE /* JSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1774466C1E9C66D70079E5EE /* JSONSerializer.m */; };
@@ -85,9 +86,11 @@
 		1774471A1E9C96870079E5EE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 177447021E9C96870079E5EE /* UIImageView+WebCache.m */; };
 		1774471B1E9C96870079E5EE /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 177447041E9C96870079E5EE /* UIView+WebCache.m */; };
 		1774471C1E9C96870079E5EE /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 177447061E9C96870079E5EE /* UIView+WebCacheOperation.m */; };
+		1774A2571EA092C500F5E505 /* MKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1774A2561EA092C500F5E505 /* MKCountDownButton.m */; };
 		17799ABD1E81117B001F8D77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17799ABC1E81117B001F8D77 /* SignInViewController.m */; };
 		177BD91A1E9F6943002F10F2 /* MKCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177BD9191E9F6943002F10F2 /* MKCustomView.m */; };
 		177BD91D1E9F6A03002F10F2 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 177BD91C1E9F6A03002F10F2 /* UIView+Utils.m */; };
+		178092E51EAF369200284AAD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178092E41EAF369100284AAD /* CoreGraphics.framework */; };
 		178E926E1E7A737800B0B61D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E926D1E7A737800B0B61D /* main.m */; };
 		178E92711E7A737800B0B61D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E92701E7A737800B0B61D /* AppDelegate.m */; };
 		178E92741E7A737800B0B61D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E92731E7A737800B0B61D /* ViewController.m */; };
@@ -208,6 +211,7 @@
 		17698F171E97270C002C273B /* favor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favor@3x.png"; sourceTree = "<group>"; };
 		177248BE1E9B82650077B649 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		177248BF1E9B82650077B649 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		177337381EB03FE6007F5D30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		177446651E9C63D40079E5EE /* XMLSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSerializer.h; sourceTree = "<group>"; };
 		177446661E9C63D40079E5EE /* XMLSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSerializer.m; sourceTree = "<group>"; };
 		177446681E9C64960079E5EE /* XMLRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRootModel.h; sourceTree = "<group>"; };
@@ -261,12 +265,15 @@
 		177447041E9C96870079E5EE /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		177447051E9C96870079E5EE /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		177447061E9C96870079E5EE /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		1774A2551EA092C500F5E505 /* MKCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCountDownButton.h; sourceTree = "<group>"; };
+		1774A2561EA092C500F5E505 /* MKCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCountDownButton.m; sourceTree = "<group>"; };
 		17799ABB1E81117B001F8D77 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		17799ABC1E81117B001F8D77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		177BD9181E9F6943002F10F2 /* MKCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCustomView.h; sourceTree = "<group>"; };
 		177BD9191E9F6943002F10F2 /* MKCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCustomView.m; sourceTree = "<group>"; };
 		177BD91B1E9F6A03002F10F2 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		177BD91C1E9F6A03002F10F2 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		178092E41EAF369100284AAD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		178E92691E7A737800B0B61D /* MKCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178E926D1E7A737800B0B61D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		178E926F1E7A737800B0B61D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -284,6 +291,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177337391EB03FE6007F5D30 /* QuartzCore.framework in Frameworks */,
+				178092E51EAF369200284AAD /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +470,8 @@
 		171B612D1E978CFA00F7A6CE /* MKButton */ = {
 			isa = PBXGroup;
 			children = (
+				1774A2551EA092C500F5E505 /* MKCountDownButton.h */,
+				1774A2561EA092C500F5E505 /* MKCountDownButton.m */,
 				171B612E1E978CFA00F7A6CE /* MKButton.h */,
 				171B612F1E978CFA00F7A6CE /* MKButton.m */,
 			);
@@ -631,9 +642,19 @@
 			path = MKCustomView;
 			sourceTree = "<group>";
 		};
+		178092E31EAF368400284AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				177337381EB03FE6007F5D30 /* QuartzCore.framework */,
+				178092E41EAF369100284AAD /* CoreGraphics.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		178E92601E7A737800B0B61D = {
 			isa = PBXGroup;
 			children = (
+				178092E31EAF368400284AAD /* Frameworks */,
 				178E926B1E7A737800B0B61D /* MKCode */,
 				178E926A1E7A737800B0B61D /* Products */,
 			);
@@ -826,6 +847,7 @@
 				171B60FD1E97866500F7A6CE /* LocalConnection.m in Sources */,
 				177446701E9C670D0079E5EE /* JSONRootModel.m in Sources */,
 				178E926E1E7A737800B0B61D /* main.m in Sources */,
+				1774A2571EA092C500F5E505 /* MKCountDownButton.m in Sources */,
 				171B61271E97867800F7A6CE /* MASViewConstraint.m in Sources */,
 				171B616B1E97917600F7A6CE /* RequestMethodType.m in Sources */,
 				171B60F21E97866500F7A6CE /* AFURLResponseSerialization.m in Sources */,

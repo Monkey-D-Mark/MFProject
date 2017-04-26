@@ -4,23 +4,34 @@
 //
 //  Created by shendan on 2017/4/1.
 //  Copyright © 2017年 Mark. All rights reserved.
-//
+//  from QMUI Team.
 
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <QuartzCore/QuartzCore.h>
 
-typedef NS_ENUM(NSUInteger, MKButtonStyle){
-    MKButtonStyleTitleDown = 0,
-    MKButtonStyleTitleRight,                     
+typedef NS_ENUM(NSInteger, MKButtonStyle){
+    MKButtonStyleTitleBottom,
+    MKButtonStyleTitleRight,
+    MKButtonStyleTitleTop,
     MKButtonStyleTitleLeft
 };
 
 @interface MKButton : UIButton
 
-@property (assign, nonatomic) CGFloat width;
-@property (assign, nonatomic) CGFloat height;
 
-@property (assign, nonatomic) MKButtonStyle buttonStyle;
+@property(assign, nonatomic) BOOL adjustsTitleTintColorAutomatically;
 
--(id)initWithFrame:(CGRect)frame buttonStyle:(MKButtonStyle)style;
+@property(nonatomic, assign)  BOOL adjustsImageTintColorAutomatically;
+
+@property(nonatomic, assign)  BOOL adjustsButtonWhenHighlighted;
+
+@property(nonatomic, assign)  BOOL adjustsButtonWhenDisabled;
+
+@property(nonatomic, strong)  UIColor *highlightedBackgroundColor;
+
+@property(nonatomic, strong)  UIColor *highlightedBorderColor;
+
+@property(nonatomic, assign) MKButtonStyle style;
 
 @end

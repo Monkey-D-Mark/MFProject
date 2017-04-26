@@ -11,6 +11,7 @@
 #import "HXSearchBar.h"
 #import "SignInViewController.h"
 #import "RealReachability.h"
+#import "MKButton.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+
+
+-(void)networkstatus {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(networkChanged:)
                                                  name:kRealReachabilityChangedNotification
@@ -45,7 +51,6 @@
     if (status == RealStatusViaWWAN){
         NSLog( @"Network WWAN! In charge!");
     }
-
 }
 
 - (void)dealloc {
