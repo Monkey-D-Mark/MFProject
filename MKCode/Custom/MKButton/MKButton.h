@@ -20,17 +20,17 @@ typedef NS_ENUM(NSInteger, MKButtonStyle){
 @interface MKButton : UIButton
 
 
-@property(assign, nonatomic) BOOL adjustsTitleTintColorAutomatically;
+@property(assign, nonatomic) IBInspectable BOOL adjustsTitleTintColorAutomatically;
 
-@property(nonatomic, assign)  BOOL adjustsImageTintColorAutomatically;
+@property(nonatomic, assign) IBInspectable BOOL adjustsImageTintColorAutomatically;
 
-@property(nonatomic, assign)  BOOL adjustsButtonWhenHighlighted;
+@property(nonatomic, assign) IBInspectable BOOL adjustsButtonWhenHighlighted;
 
-@property(nonatomic, assign)  BOOL adjustsButtonWhenDisabled;
+@property(nonatomic, assign) IBInspectable BOOL adjustsButtonWhenDisabled;
 
-@property(nonatomic, strong)  UIColor *highlightedBackgroundColor;
+@property(nonatomic, strong) IBInspectable UIColor *highlightedBackgroundColor;
 
-@property(nonatomic, strong)  UIColor *highlightedBorderColor;
+@property(nonatomic, strong) IBInspectable UIColor *highlightedBorderColor;
 
 @property(nonatomic, assign) MKButtonStyle style;
 

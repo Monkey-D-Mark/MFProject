@@ -26,7 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    MKButton *button = [[MKButton alloc] initWithFrame:CGRectMake(20, 100, 211, 60)];
+    button.style = MKButtonStyleTitleBottom;
+    [button setImage:[UIImage imageNamed:@"favor"] forState:UIControlStateNormal];
+    [button setTitle:@"bottom 咋没用" forState:UIControlStateNormal];
+    [self.view addSubview:button];
 }
 
 

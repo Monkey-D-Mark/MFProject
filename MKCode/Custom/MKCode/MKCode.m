@@ -26,6 +26,8 @@
     return instance;
 }
 
+#pragma mark ***************input number is phonenumber***************
+
 -(BOOL)isMobileNumber:(NSString *)mobileNum {
     NSString *MOBILE = @"^1[34578]\\d{9}$";
     NSPredicate *regexTestMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",MOBILE];
@@ -35,6 +37,8 @@
         return NO;
     }
 }
+
+#pragma mark ***************input character is number***************
 
 -(BOOL)isNumber:(NSString *)string {
     NSString *number = @"^[0-9]*$";
@@ -59,6 +63,7 @@
     return theImage;
 }
 
+#pragma mark ***************Chinese Character width***************
 
 -(CGFloat)widthOfOneChineseCharacter {
     NSString *oneChinese = @"一";
@@ -67,11 +72,13 @@
     return width;
 }
 
-//有序集合
+///有序集合
 -(NSArray *)mergeArray:(NSArray *)originArr {
     NSOrderedSet *set =  [NSOrderedSet orderedSetWithArray:originArr];
     return set.array;
 }
+
+#pragma mark ***************get current viewcontroller***************
 
 - (UIViewController *)getPresentedViewController {
     UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
@@ -86,13 +93,10 @@
     UIViewController *result = nil;
     
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
+    if (window.windowLevel != UIWindowLevelNormal) {
         NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
+        for(UIWindow * tmpWin in windows) {
+            if (tmpWin.windowLevel == UIWindowLevelNormal) {
                 window = tmpWin;
                 break;
             }
@@ -102,7 +106,7 @@
     UIView *frontView = [[window subviews] objectAtIndex:0];
     id nextResponder = [frontView nextResponder];
     
-    if ([nextResponder isKindOfClass:[UIViewController class]]){
+    if ([nextResponder isKindOfClass:[UIViewController class]]) {
         result = nextResponder;
     } else {
         result = window.rootViewController;
