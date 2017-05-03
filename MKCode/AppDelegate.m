@@ -18,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //SignInViewController *vc = [SignInViewController new];
+    ViewController *vc = [ViewController new];
+    self.window.rootViewController = vc;
     return YES;
 }
 

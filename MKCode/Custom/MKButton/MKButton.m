@@ -5,8 +5,9 @@
 //  Created by shendan on 2017/4/1.
 //  Copyright © 2017年 Mark. All rights reserved.
 //  from QMUI Team.
-#define ScreenScale ([[UIScreen mainScreen] scale])
+
 #import "MKButton.h"
+#import "QMUICommonDefines.h"
 
 @interface MKButton ()
 @property(nonatomic, strong) CALayer *highlightedBackgroundLayer;
@@ -388,7 +389,6 @@
     }
 }
 
-
 - (void)removeDefaultAnimations:(CALayer *)layer {
     layer.actions = @{@"sublayers": [NSNull null],
                      @"contents": [NSNull null],
@@ -406,89 +406,6 @@
                      @"shadowOffset": [NSNull null],
                      @"shadowRadius": [NSNull null],
                      @"shadowPath": [NSNull null]};
-}
-
-/// 获取UIEdgeInsets在水平方向上的值
-CG_INLINE CGFloat
-UIEdgeInsetsGetHorizontalValue(UIEdgeInsets insets) {
-    return insets.left + insets.right;
-}
-
-/// 获取UIEdgeInsets在垂直方向上的值
-CG_INLINE CGFloat
-UIEdgeInsetsGetVerticalValue(UIEdgeInsets insets) {
-    return insets.top + insets.bottom;
-}
-
-/// 传入size，返回一个x/y为0的CGRect
-CG_INLINE CGRect
-CGRectMakeWithSize(CGSize size) {
-    return CGRectMake(0, 0, size.width, size.height);
-}
-
-CG_INLINE CGRect
-CGRectSetX(CGRect rect, CGFloat x) {
-    rect.origin.x = flatf(x);
-    return rect;
-}
-
-CG_INLINE CGRect
-CGRectSetY(CGRect rect, CGFloat y) {
-    rect.origin.y = flatf(y);
-    return rect;
-}
-/*
-CG_INLINE CGRect
-CGRectSetXY(CGRect rect, CGFloat x, CGFloat y) {
-    rect.origin.x = flatf(x);
-    rect.origin.y = flatf(y);
-    return rect;
-}*/
-
-CG_INLINE CGRect
-CGRectSetWidth(CGRect rect, CGFloat width) {
-    rect.size.width = flatf(width);
-    return rect;
-}
-
-CG_INLINE CGRect
-CGRectSetHeight(CGRect rect, CGFloat height) {
-    rect.size.height = flatf(height);
-    return rect;
-}
-
-/// 对CGRect的x/y、width/height都调用一次flatf，以保证像素对齐
-CG_INLINE CGRect
-CGRectFlatted(CGRect rect) {
-    return CGRectMake(flatf(rect.origin.x), flatf(rect.origin.y), flatf(rect.size.width), flatf(rect.size.height));
-}
-
-/**
- *  基于当前设备的屏幕倍数，对传进来的 floatValue 进行像素取整。
- *
- *  注意如果在 Core Graphic 绘图里使用时，要注意当前画布的倍数是否和设备屏幕倍数一致，若不一致，不可使用 flatf() 函数。
- */
-CG_INLINE float
-flatf(float floatValue) {
-    return flatfSpecificScale(floatValue, 0);
-}
-
-/**
- *  基于指定的倍数，对传进来的 floatValue 进行像素取整。若指定倍数为0，则表示以当前设备的屏幕倍数为准。
- *
- *  例如传进来 “2.1”，在 2x 倍数下会返回 2.5（0.5pt 对应 1px），在 3x 倍数下会返回 2.333（0.333pt 对应 1px）。
- */
-CG_INLINE float
-flatfSpecificScale(float floatValue, float scale) {
-    scale = scale == 0 ? ScreenScale : scale;
-    CGFloat flattedValue = ceilf(floatValue * scale) / scale;
-    return flattedValue;
-}
-
-/// 用于居中运算
-CG_INLINE CGFloat
-CGFloatGetCenter(CGFloat parent, CGFloat child) {
-    return flatf((parent - child) / 2.0);
 }
 
 @end
