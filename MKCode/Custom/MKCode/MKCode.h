@@ -37,4 +37,9 @@
  */
 -(UIImage *)createImageWithColor:(UIColor*) color;
 
+-(NSArray *)mergeArray:(NSArray *)originArr;
+-(NSArray *)mergefunction1:(NSArray *)originArr;
+-(NSArray *)mergefunction2:(NSArray *)originArr;
+-(NSArray *)mergefunction3:(NSArray *)originArr;
+
 @end
